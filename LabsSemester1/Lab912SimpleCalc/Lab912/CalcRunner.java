@@ -14,7 +14,18 @@ public class CalcRunner
      * Constructor for objects of class CalcRunner
      */
     public CalcRunner()
+        
     {
+        x1 = EasyCalc.add(3,5);
+          system.out.println(x1)
+        x2 = EasyCalc.subtract(3,5);
+        system.out.println(x2)
+        x3 =  EasyCalc.multiply(7,5);
+        system.out.println(x3)
+        x4 =  EasyCalc.divide(3,4);
+        system.out.println(x4);
+         x5 = EasyCalc.module(6,7);
+        system.out.println(x5)
         // initialise instance variables
         x = 0;
     }
