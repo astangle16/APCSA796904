@@ -11,12 +11,16 @@ public class SimpleCalc
     num1 = a;
     num2 = b;
 
-    public static double add(int a, int b){return a+b}
+    public static double add(int a, int b){return a+b;}
+    public static double subtract(int a, int b){return a-b;}
+    public static double multiply(int a, int b){return a*b;}
+    public static double divide(int a, int b;){
+        if (b==0) return -1;
+        return a/b
+    }
     
-    Return num1 + num2;
-  
-    
-    
+    public static double moduloDivide(int a, int b){return a%b}
+   
     
     // instance variables - replace the example below with your own
     private int x;
