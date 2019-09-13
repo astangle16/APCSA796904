@@ -8,10 +8,10 @@
 public class SimpleCalc
 {
     public MMM(int x, int y)
-    num1 = x;
-    num2 = y;
+    num1 = a;
+    num2 = b;
 
-    public static int addNumbers();
+    public static double add(int a, int b){return a+b}
     
     Return num1 + num2;
   
