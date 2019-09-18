@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class SimpleCalc here.
+ * Lab912 Simple.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Alec Rodriguez Stangle)
+ * @version (912)
  */
 public class SimpleCalc
 {
