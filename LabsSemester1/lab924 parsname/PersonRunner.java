@@ -21,7 +21,7 @@ public class PersonRunner{
             System.out.println("Enter a name or type \"quit\" to quit");
             inputStr = kb.nextLine();
             System.out.println(inputStr);
-            person per = new Person(inputstr);
+            Person per = new Person(inputstr);
             
         }
         System.out.print
