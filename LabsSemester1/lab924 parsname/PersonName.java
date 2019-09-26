@@ -1,37 +1,50 @@
-
-/**
- * Write a description of class PersonName here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class PersonName
 {
-    // instance variables - replace the example below with your own
-    public String Fname, Mname, Lname
-    
-    /**
-     * Constructor for objects of class PersonName
-     */
-    public PersonName()
-    parseName(fullName);
-    {
-        // initialise instance variables
-        x = 0;
-    }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public String Fname="", Mname="", Lname="";
+    
+
+    public PersonName() {
+    
+    }
+    
+    public PersonName(String fullName){
+        parseName(fullName);
+    
+    }
+    
+    
+    public void parseName(String fullName)
     {
-        // put your code here
-        fName = fullName.substring(0,FullName.indexOf("");
-        lName = fullName.substring(0, Full
+        System.out.println("Welocome to ParseLand..." + fullName);
         
-        return x + y;
+        // Format One:  	"Last, First Middle"
+        if(fullName.contains(",") && !fullName.matches("\\S+")) {
+            System.out.println("FORMAT 1");
+
+            int commaLocation = fullName.indexOf(",");
+            Lname = fullName.substring(0,commaLocation);
+            
+            String restOfName = fullName.substring(commaLocation+2, fullName.length());
+            System.out.println("restOfName=" + restOfName);
+            int spaceLocation = restOfName.indexOf(" ");
+            Fname = restOfName.substring(0, spaceLocation);
+           
+            restOfName = restOfName.substring(spaceLocation+1, restOfName.length());
+            System.out.println("restOfName=" + restOfName);
+            Mname = restOfName.substring(0, restOfName.length());
+
+        }
+        
+        //Format Two:  	"Last, First"
+         
+        // Format Three:  	"First Middle Last"
+            
+        //  Format four:  	"First Last"
+        
+        // log
+       System.out.println("Fname..." + Fname);
+       System.out.println("Mname..." + Mname); 
+       System.out.println("Lname..." + Lname);
     }
 }
