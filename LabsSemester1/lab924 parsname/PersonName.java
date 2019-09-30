@@ -1,7 +1,7 @@
 public class PersonName
 {
 
-    public String Fname="", Mname="", Lname="";
+    public String fName="", mName="", lName="";
 
     public PersonName() {
     }
@@ -13,7 +13,7 @@ public class PersonName
 
     public void parseName(String fullName)
     {
-        System.out.println("Welocome to ParseLand..." + fullName);
+        //System.out.println("Welocome to ParseLand..." + fullName);
 
         // Format One:      "Last, First Middle"
         // if(fullName.contains(",") && !fullName.matches("\\S+")) {
@@ -26,15 +26,23 @@ public class PersonName
             if(spaceLocation != -1) {
                 System.out.println("FORMAT 1");
 
-                Fname = restOfName.substring(0, spaceLocation);
-                Mname = restOfName.substring(spaceLocation+1, restOfName.length());
-                Lname = fullName.substring(0,commaLocation);
-                System.out.println("Fname..." + Fname);
-                System.out.println("Mname..." + Mname); 
-                System.out.println("Lname..." + Lname);
+                fName = restOfName.substring(0, spaceLocation);
+                mName = restOfName.substring(spaceLocation+1, restOfName.length());
+                lName = fullName.substring(0,commaLocation);
+                System.out.println("fName..." + fName);
+                System.out.println("mName..." + mName); 
+                System.out.println("lName..." + lName);
 
             }   
-        }
+        
+            int ci  = str.indexOf(",")
+            int si = str.indexof(" ")
+            int lsi = str.lastIndexOfc("")
+            
+       
+  }
+        
+        
 
         // String restOfName = fullName.substring(commaLocation+2, fullName.length());
         //System.out.println("restOfName=" + restOfName);
@@ -47,13 +55,9 @@ public class PersonName
 
     }
 
-    //Format Two:   "Last, First"
-
-    // Format Three:    "First Middle Last"
-
-    //  Format four:    "First Last"
-
-    // log
+    public String toString(){
+       return fName + mName + lName;   
+    }
 
 }
 
