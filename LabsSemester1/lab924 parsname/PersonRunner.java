@@ -6,19 +6,10 @@ import org.apache.commons.lang3.StringUtils;
 /*
  * SOLUTION
  */
-class Solution {
-  
-  // main
-  public static void main(String[] args) {  
-      PersonRunner per = new PersonRunner();
-  }
-  
-  /*
-   * RUNNER
-   */
+
   public static class PersonRunner {
   
-    public PersonRunner() {
+    public static void name() {
       
         Scanner kb = new Scanner(System.in);
         String inputStr = "";

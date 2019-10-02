@@ -1,7 +1,7 @@
 public class PersonName
 {
 
-    public String fName="", mName="", lName="";
+    private String fName="", mName="", lName="";
 
     public PersonName() {
     }
@@ -16,34 +16,39 @@ public class PersonName
         //System.out.println("Welocome to ParseLand..." + fullName);
 
         // Format One:      "Last, First Middle"
-        // if(fullName.contains(",") && !fullName.matches("\\S+")) {
+        // Format Two:      "Last, First"
+        // Format Three:    "First Middle Last
+        // Format Four:      "First Last"
 
-        int commaLocation = fullName.indexOf(",");
-        if(commaLocation != -1 ) {
-            String restOfName = fullName.substring(commaLocation+2, fullName.length());
-            System.out.println("restOfName=" + restOfName);
+        //int commaLocation = fullName.indexOf(",");
+        int commma  = fullName.indexOf(","); // Comma location
+        int firstspace = fullName.indexof(" "); // Space Location
+        int secondspace = fullName.lastIndexOfc("");
+        if(comma != -1 ) {// case 1 or 2 
+            String restOfName = fullName.substring(ci+2);
+            fName = restOfName.substring(si+1);
+            lName = restOfName.substring(ci+1);
+            mName = restOfName.substring(si+2);
             int spaceLocation = restOfName.indexOf(" ");
+
             if(spaceLocation != -1) {
                 System.out.println("FORMAT 1");
 
                 fName = restOfName.substring(0, spaceLocation);
                 mName = restOfName.substring(spaceLocation+1, restOfName.length());
-                lName = fullName.substring(0,commaLocation);
+                lName = fullName.substring(0,comma);
                 System.out.println("fName..." + fName);
                 System.out.println("mName..." + mName); 
                 System.out.println("lName..." + lName);
 
-            }   
-        
-            int ci  = str.indexOf(",")
-            int si = str.indexof(" ")
-            int lsi = str.lastIndexOfc("")
-            
-       
-  }
-        
-        
+            } else { // this will be for case 3 or 4 
 
+                
+            }
+        
+            
+        }
+        
         // String restOfName = fullName.substring(commaLocation+2, fullName.length());
         //System.out.println("restOfName=" + restOfName);
         //int spaceLocation = restOfName.indexOf(" ");
@@ -56,7 +61,7 @@ public class PersonName
     }
 
     public String toString(){
-       return fName + mName + lName;   
+        return fName + " " + mName + " " + lName;   
     }
 
 }
