@@ -1,68 +1,110 @@
-public class PersonName
-{
+import java.io.*;
+import java.util.*;
 
-    private String fName="", mName="", lName="";
+import org.apache.commons.lang3.StringUtils;
 
-    public PersonName() {
+/*
+ * SOLUTION
+ */
+class Solution {
+  
+  // main
+  public static void main(String[] args) {  
+      PersonRunner per = new PersonRunner();
+  }
+  
+  /*
+   * RUNNER
+   */
+  public static class PersonRunner {
+  
+    public PersonRunner() {
+      
+        Scanner kb = new Scanner(System.in);
+        String inputStr = "";
+        
+        while(!inputStr.equals("quit")){
+            
+            System.out.println("Enter a name or type \"quit\" to quit");
+            inputStr = kb.nextLine();
+            // System.out.println(inputStr);
+            PersonName per = new PersonName(inputStr);
+            
+        }
+
     }
+ }
+  
+  /*
+   * PERSON NAME
+   */
+  public static class PersonName{
+
+    public String fName="", mName="", lName="";
 
     public PersonName(String fullName){
         parseName(fullName);
-
     }
+    
+    
+    public void parseName(String fullName)    {
 
-    public void parseName(String fullName)
-    {
-        //System.out.println("Welocome to ParseLand..." + fullName);
+      int fsi = fullName.indexOf(" "); // first space index
+      int lsi = fullName.lastIndexOf(" "); // last space index
+      int ci =  fullName.indexOf(","); // comma index
+      
+      // System.out.println("index_of_first_space= " + index_of_first_space);
+      // System.out.println("index_of_second_space= " + index_of_second_space);
+      // System.out.println("index_of_comma= " + index_of_comma);
 
-        // Format One:      "Last, First Middle"
-        // Format Two:      "Last, First"
-        // Format Three:    "First Middle Last
-        // Format Four:      "First Last"
+         
+      if(ci != -1){ // comma 
 
-        //int commaLocation = fullName.indexOf(",");
-        int commma  = fullName.indexOf(","); // Comma location
-        int firstspace = fullName.indexof(" "); // Space Location
-        int secondspace = fullName.lastIndexOfc("");
-        if(comma != -1 ) {// case 1 or 2 
-            String restOfName = fullName.substring(ci+2);
-            fName = restOfName.substring(si+1);
-            lName = restOfName.substring(ci+1);
-            mName = restOfName.substring(si+2);
-            int spaceLocation = restOfName.indexOf(" ");
+        if(fsi != lsi) { // two spaces
+          
+          System.out.println("comma two spaces");              
+          // Format Three:    "First, Middle Last"
+          fName = fullName.substring(0, fsi-1);
+          mName = fullName.substring(fsi+1, lsi);
+          lName = fullName.substring(lsi, fullName.length());
 
-            if(spaceLocation != -1) {
-                System.out.println("FORMAT 1");
-
-                fName = restOfName.substring(0, spaceLocation);
-                mName = restOfName.substring(spaceLocation+1, restOfName.length());
-                lName = fullName.substring(0,comma);
-                System.out.println("fName..." + fName);
-                System.out.println("mName..." + mName); 
-                System.out.println("lName..." + lName);
-
-            } else { // this will be for case 3 or 4 
-
-                
-            }
-        
-            
+        } else { // one space
+          
+         System.out.println("comma one space");             
+         fName = fullName.substring(lsi+1, fullName.length());
+         
+         lName = fullName.substring(0, ci);
         }
         
-        // String restOfName = fullName.substring(commaLocation+2, fullName.length());
-        //System.out.println("restOfName=" + restOfName);
-        //int spaceLocation = restOfName.indexOf(" ");
-        //Fname = restOfName.substring(0, spaceLocation);
+      } else {  // no comma
 
-        // restOfName = restOfName.substring(spaceLocation+1, restOfName.length());
-        // System.out.println("restOfName=" + restOfName);
-        // Mname = restOfName.substring(0, restOfName.length());
+        if(fsi != lsi) { // two spaces
+          fName = fullName.substring(0, fsi);
+          mName = fullName.substring(fsi, lsi );
+          lName = fullName.substring(lsi, fullName.length());
+          System.out.println("no comma and two spaces");             
+          
+          
+        } else { // one space
+          fName = fullName.substring(0, fsi);
+          mName = fullName.substring(fsi, lsi );
+          lName = fullName.substring(lsi, fullName.length());
+          System.out.println("no comma and one spaces");             
+        }
 
+      }
+      
+      System.out.println("fName=" + fName);
+       System.out.println("mName=" + mName);
+      System.out.println("lName=" + lName);
+
+      
+      
     }
-
-    public String toString(){
-        return fName + " " + mName + " " + lName;   
-    }
-
+  }
 }
+
+  
+  
+
 
