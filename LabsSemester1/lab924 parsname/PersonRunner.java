@@ -1,15 +1,26 @@
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.lang3.StringUtils;
+
 
 /*
  * SOLUTION
  */
 
-  public static class PersonRunner {
   
-    public static void name() {
+  
+  
+  /*
+   * RUNNER
+   */
+  public  class PersonRunner {
+      
+      // main
+  public static void main(String[] args) {  
+      PersonRunner per = new PersonRunner();
+  }
+  
+    public PersonRunner() {
       
         Scanner kb = new Scanner(System.in);
         String inputStr = "";
@@ -24,53 +35,6 @@ import org.apache.commons.lang3.StringUtils;
         }
 
     }
- }
-  
-  /*
-   * PERSON NAME
-   */
-  public static class PersonName{
-
-    public String Fname="", Mname="", Lname="";
-
-    public PersonName(String fullName){
-        parseName(fullName);
-    }
-    
-    
-    public void parseName(String fullName)    {
-
-      int index_of_first_space = StringUtils.ordinalIndexOf(fullName, " ", 1);
-      int index_of_second_space = StringUtils.ordinalIndexOf(fullName, " ", 2);
-      int index_of_comma = StringUtils.ordinalIndexOf(fullName, " ", 1);
-      
-      // System.out.println("index_of_first_space= " + index_of_first_space);
-      // System.out.println("index_of_second_space= " + index_of_second_space);
-      // System.out.println("index_of_comma= " + index_of_comma);
-
-      
-      // Format One:    "Last, First Middle"   
-      if(fullName.contains(",") && index_of_second_space!=-1) {  
-        System.out.println("FORMAT 1");
-      }
-
-      //Format Two:    "Last, First"
-      if(fullName.contains(",") && index_of_second_space==-1) {
-        System.out.println("FORMAT 2");        
-      }
-
-      // Format Three:    "First Middle Last"
-      if(!fullName.contains(",") && index_of_second_space!=-1) {
-              System.out.println("FORMAT 3");        
-      }     
-      
-      //  Format four:    "First Last"
-      if(!fullName.contains(",") && index_of_second_space==-1) {
-          System.out.println("FORMAT 4");
-      }
-      
-    
-  }
-  
 }
 
+ 

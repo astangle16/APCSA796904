@@ -1,44 +1,4 @@
-import java.io.*;
-import java.util.*;
-
-import org.apache.commons.lang3.StringUtils;
-
-/*
- * SOLUTION
- */
-class Solution {
-  
-  // main
-  public static void main(String[] args) {  
-      PersonRunner per = new PersonRunner();
-  }
-  
-  /*
-   * RUNNER
-   */
-  public static class PersonRunner {
-  
-    public PersonRunner() {
-      
-        Scanner kb = new Scanner(System.in);
-        String inputStr = "";
-        
-        while(!inputStr.equals("quit")){
-            
-            System.out.println("Enter a name or type \"quit\" to quit");
-            inputStr = kb.nextLine();
-            // System.out.println(inputStr);
-            PersonName per = new PersonName(inputStr);
-            
-        }
-
-    }
- }
-  
-  /*
-   * PERSON NAME
-   */
-  public static class PersonName{
+public  class PersonName{
 
     public String fName="", mName="", lName="";
 
@@ -102,9 +62,4 @@ class Solution {
       
     }
   }
-}
-
-  
-  
-
 
