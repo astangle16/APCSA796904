@@ -1,0 +1,127 @@
+import java.io.*;
+import java.util.*;
+
+
+class Solution {
+  
+  
+  public static void main(String[] args) {
+ 
+// QUESTION 3
+// for(int i=0; i<100; i++) {
+//   double p =  ((int) Math.random()*10) + 11;
+//   System.out.println(p);
+// }
+
+// QUESTION 4
+//   int num = 4;
+//   if(num/3 <= 1) {
+//     System.out.print("true");
+//   }
+//      System.out.println(" false");
+// }
+    
+    
+//   QUESTION 5 
+//   int num = 6 ;
+//   if(num/3 < 2){
+//       System.out.print("First");
+//   }else if(num%4 <=2){
+//     System.out.print("Second");   
+//   }else{
+//     System.out.print("Third");
+//   }
+//     System.out.print("Fourth");
+//   }
+
+
+//     QUESTION 6   
+//     int[] evens  = new int[4];
+//     int i=0;
+//     while(i<4) {  
+//       evens[i] = (i+1)*2;
+//       i++;
+//     }
+//    
+//     // test code
+//     int j=0;
+//     while(j<4) {
+//       System.out.println(evens[j]); 
+//       j++;
+//     }
+                                 
+
+//   QUESTION 7  
+//   setup code
+// int array1[] = {1,2,3};
+// int array2[] = {5,11,2};
+// int array3[] = {7,0,0};
+// arrayAverage(array1);
+// arrayAverage(array2);
+// arrayAverage(array3);
+//    
+// answer 7: average method here
+//   private static double arrayAverage(int[] nums) { // nums is passing value of average array
+//     double sum = 0;
+//     int j=0;
+//     while(j<nums.length) {
+//       System.out.println(nums[j]); 
+//       sum = sum + nums[j];
+//       j++;
+//     }
+//     double average = sum/nums.length;
+//    
+//     // test
+//     System.out.println(sum); 
+//     System.out.println(average); 
+//
+//     return average;
+//   }
+
+
+    
+// QUESTION 8 
+// setup
+//    int[] nums  = new int[12];
+//    int j=0;
+//    while(j<nums.length) {
+//        nums[j] = (j+1)*2;
+//        j++;
+//    }
+// 
+//    test
+//    int array1[] = {1,2,3};
+//    sum3(array1);   
+//    int array2[] = {5,11,2};
+//    sum3(array2);
+//    int array3[] = {7,0,0};
+//    sum3(array3);
+//
+//   } // end of method
+//
+//  
+// answer 
+//  private static double sum3(int[] nums) {
+//
+//     double sum = 0;
+//     for(int i = 0; i < nums.length; i++) {
+//       System.out.println(nums[i]); 
+//       sum = sum + nums[i];
+//     }
+//
+//     // test
+//     System.out.println(sum);
+//
+//   return sum;
+//  }
+    
+    
+  // QUESTION 9
+  
+  
+} // end of method
+  
+  
+
+} // end of class
+ 
