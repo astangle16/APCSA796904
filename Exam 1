@@ -117,11 +117,50 @@ class Solution {
     
     
   // QUESTION 9
+//   for(int i = 0; i<4; i++){  // 4 different lines
+    
+//     for(int j = 0; j<= 1; j++){
+//       System.out.print("X ");  // 2 per line
+//     }
+//     System.out.println();
+    
+   // it print: X X
+   //           X X
+   //           X X
+   //           X X
+    
+    
+ // QUESTION 10
+    
+//     public class Pumpkin{
+//    private int num;        // instance variable
+//    public Pumpkin(int n){  //construcor
+//      num = n;              // constructor
   
+    
+    // QUESTION 11
+    // digitSum(123);
   
-} // end of method
+    
+    // } // end of method
   
-  
+      // Question 11
+//   private static int digitSum(int num) {
+//     int sum = 0;
+    
+//     while(num >= 1) {
+//        System.out.println(num); 
+//        int digit = num % 10;
+//        sum = sum + digit;
+//        num = num / 10;
+//      }
 
-} // end of class
+//     // test
+//     System.out.println(sum);
+
+//   return sum;
+//  }
+    
+
+// }
  
