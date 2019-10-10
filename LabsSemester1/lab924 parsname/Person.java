@@ -1,8 +1,8 @@
-public  class PersonName{
+public  class Person{
 
     public String fName="", mName="", lName="";
 
-    public PersonName(String fullName){
+    public Person(String fullName){
         parseName(fullName);
     }
     

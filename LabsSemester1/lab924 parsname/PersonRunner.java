@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 /*
- * SOLUTION
+ * SOLUTION parsname 924 926
  */
 
 /*
@@ -21,46 +21,44 @@ public  class PersonRunner {
         String inputStr = "";
 
         while(!inputStr.equals("quit")){
-
-            System.out.println("Enter a name or type \"quit\" to quit");
-            inputStr = kb.nextLine();
-            // System.out.println(inputStr);
-            PersonName per = new PersonName(inputStr);
-
+            if(count <= persons.length){
+                //add person
+                persons[count] = new persons(inputStr);
+                persons = extendArray(persons,2);
+                // increase count
+                count++;
+            }
         }
     }
 
-    
-    public Person[] extendArray(Person[] p1, int i){
-        
-        
-        
-        Person[] s2 = new Person[p1.length+i];
+    public static Persons[] extendArray(Persons[] p1,int n){
+        Persons[] p2 = new Persons[p1.length + n];
 
         for(int i = 0; i <p1.length; i++){
             p2[i] = p1[i];
         }
-        
-        public static void main(){
-            Person[] persons = new Persons[2];
-            int count = 0;
-            
-            Scanner kb = new Scanner(System.in);
-            System.out.println("enter a name");
-            String kbInput = kb.nextLine();
-            
-            while(kbInput.equals(
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        return p2;
     }
 }
+}
 
+
+
+//  public Person[] extendArray(Person[] p1, int i){
+
+//    Person[] s2 = new Person[p1.length+i];
+//    for(int i = 0; i <p1.length; i++){
+//        p2[i] = p1[i];
+//    }
+//    
+//    public static void main(){
+//        Person[] persons = new Persons[2];
+//        int count = 0;
+
+//        Scanner kb = new Scanner(System.in);
+//        System.out.println("enter a name");
+//        String kbInput = kb.nextLine();
+
+//   while(kbInput.equals(
+
+        
