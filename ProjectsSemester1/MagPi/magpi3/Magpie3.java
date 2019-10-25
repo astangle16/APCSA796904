@@ -29,6 +29,15 @@ public class Magpie3
      */
     public String getResponse(String statement)
     {
+      
+
+         MyCat cat = new MyCat();
+       System.out.println(cat.getName());
+       cat.setName("cat ");
+       System.out.println(cat.getName());
+
+        
+        
         String response = "";
         if (statement.length() == 0)
         {
