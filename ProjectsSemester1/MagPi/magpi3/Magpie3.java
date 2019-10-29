@@ -35,8 +35,18 @@ public class Magpie3
        System.out.println(cat.getName());
        cat.setName("cat ");
        System.out.println(cat.getName());
-
-        
+    private int findKeyword(String statement, String goal, int startPos)
+    {   String phrase = statement.trim().toLowerCase();
+        goal = goal.toLowerCase();
+        int psn = phrase.indexOf(goal, startPos); 
+   while (psn >= 0)
+   {     String before = " ", after = " ";
+       if (psn > 0)
+       {
+           before = phrase.substring(psn - 1, psn);
+        }     if (psn + goal.length() < phrase.length())
+        {       after = phrase.substring(psn + goal.length(),                                 psn + goal.length() + 1);    
+         psn + goal.length() + 1); 
         
         String response = "";
         if (statement.length() == 0)
@@ -155,8 +165,19 @@ public class Magpie3
         double r = Math.random();
         int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
         String response = "";
+        
+          if (((before.compareTo ("a") < 0 ) || (before.compareTo("z") > 0))
+          &&
+          ((after.compareTo ("a") < 0 ) || (after.compareTo("z") > 0)))
+          {
+              return psn;
+            }
+            psn = phrase.indexOf(goal, psn + 1);     } 
+   return -1;  
+} 
 
-        if (whichResponse == 0)
+{
+    if (whichResponse == 0)
         {
             response = "Interesting, tell me more.";
         }
@@ -172,10 +193,16 @@ public class Magpie3
         {
                                         response = "You don't say.";
         }           
+        findKeyword("She's my sister", "sister", 0); 
+ findKeyword("Brother Tom is helpful", "brother", 0); 
+ findKeyword("I can't catch wild cats.", "cat", 0); 
+ findKeyword("I know nothing about snow plows.", "no", 0); 
 
         return response;
+    }
     }
     // when i say brother it says tell me more about your family
     //when i say no it says why so negitive
     //when you say bye the chat bot quits
+}
 }
