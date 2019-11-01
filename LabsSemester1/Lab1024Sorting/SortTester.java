@@ -6,15 +6,15 @@
  * @version (a version number or a date)
  */
 
-public class SortTester
-{
+public class SortTester{
     // instance variables - replace the example below with your own
  ///   ArrayList
     /**
      * Constructor for objects of class SortTester
      */
     public SortTester()
-    {ArrayList<Integer> numList = new ArrayList<Integer>();
+    {
+        ArrayList<Integer> numList = new ArrayList<Integer>();
 
     }
 
