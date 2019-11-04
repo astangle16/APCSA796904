@@ -5,23 +5,40 @@
  * @author (Alleccz Ztanjul!7)
  * @version (a version number or a date)
  */
+import java.util.*;
 public class StringChecker{
+    
+    private String[] wordArray = {"cat", "catcher", "Thatcher", "catdog", "caterpillar"};
+    private ArrayList<String> wordList = new ArrayList<String>();
+    private String key = "cat";
 
     public StringChecker(){
-        
+        loadWordList();
+        ArrayList<String> keyList = wordChecker(wordArray, key);
+        //  Write the function printList
+        printList(keyList);
+    }
+    
+    public void loadWordList(){
+        wordList.add("cat");
+        wordList.add("catcher");
+        wordList.add("Thatcher");
+        wordList.add("catdog");
+        wordList.add("caterpillar");
+            
     }
 
-    public ArrayList<String> wordChecker(string[] str, string key){
-        ArrayList<String> templist = new ArrayList<Strings>();
-        for(int i = 0; 1 < str.length; i++){
+    public ArrayList<String> wordChecker(String[] str, String key){
+        ArrayList<String> tempList = new ArrayList<String>();
+        for(int i = 0; i < str.length; i++){
             if(str[i] != null){
                 if(str[i].indexOf(key) != -1){
-                    templist.add(str[i]);
+                    tempList.add(str[i]);
                 }
             }
         }
 
-        return templist;
+        return tempList;
     }
 
     // {
