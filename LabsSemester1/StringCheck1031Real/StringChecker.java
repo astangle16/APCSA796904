@@ -16,7 +16,7 @@ public class StringChecker{
         loadWordList();
         ArrayList<String> keyList = wordChecker(wordArray, key);
         //  Write the function printList
-        printList(keyList);
+    //    printList(keyList);
     }
     
     public void loadWordList(){
