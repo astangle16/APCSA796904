@@ -4,21 +4,29 @@
  *
  * @author (your name)
  * @version (a version number or a date)
- */
+ */ 
+import java.util.*;
 public class StudentListRunner
 {
+    
     // instance variables - replace the example below with your own
-    private int x;
+
     public static void main(){
     StudentListRunner name = new StudentListRunner();
     name.menuNumber();
+    int number = name.menuNumber;
     }
     /**
      * Constructor for objects of class StudentListRunner
      */
-    public void menuNumber()
+    public int menuNumber()
     {
+       Scanner myObj = new Scanner(System.in);  // Create a Scanner object
        System.out.println("Print 1 to add a student");
+      
+       int student = myObj.nextInt();
+       return student;
+       
     }
 
     /**
