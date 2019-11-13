@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class StudentListRunner here.
  *
@@ -8,36 +8,60 @@
 import java.util.*;
 public class StudentListRunner
 {
-    
-    // instance variables - replace the example below with your own
 
     public static void main(){
-    StudentListRunner name = new StudentListRunner();
-    name.menuNumber();
-    int number = name.menuNumber;
-    }
-    /**
-     * Constructor for objects of class StudentListRunner
-     */
-    public int menuNumber()
-    {
-       Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-       System.out.println("Print 1 to add a student");
-      
-       int student = myObj.nextInt();
-       return student;
-       
+        StudentListRunner studList = new StudentListRunner();
+        name.menuNumber();
+        int number = name.menuNumber;
+        makeMenu();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public int menuNumber()
     {
-        // put your code here
-        return x + y;
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Print 1 to add a student");
+
+        int student = myObj.nextInt();
+        return student;
+        while(inputStr.equals("8")){
+
+            System.out.println("welcome tell me what you want to do");
+            System.out.println("1 [add student to list] ");
+            System.out.println("2 [delete Student From List]");
+            System.out.println("3 [edit Student List]");
+            System.out.println("4 [clearList]");
+            System.out.println("5 [printAll]");
+            System.out.println("6 [printStudent]");
+            System.out.println("7 [sortStudents]");
+            System.out.println("8 [Quit]");
+
+            inputStr = kb.nextline();
+
+            if(inputStr.equals("1")){
+                studentList.clearLst();
+            }
+            if(inputStr.equals("2")){
+                studentList.addStudentToList();
+            }
+            if(inputStr.equals("3")){
+                studentList..deleteStudentFromList();
+            }
+            if(inputStr.equals("4")){
+                studentList.editStudentList();
+            }
+            if(inputStr.equals("5")){
+                studentList.clearList();
+            }
+            if(inputStr.equals("6")){
+                studentList.printAll();
+            }
+            if(inputStr.equals("7")){
+                studentList.printStudent();
+            }
+            if(inputStr.equals("8")){
+                studentList.clearList();
+            }
+
+        }
     }
 }
