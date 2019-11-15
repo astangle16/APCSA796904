@@ -5,34 +5,30 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class StudentList
-{
-public void addStudent(String fullName){
 
+import java.util.*;
+public class StudentList{
+    ArrayList<Student> studList = new ArrayList<Student>();
 
-}
-    /**
-     * Constructor for objects of class StudentList
-     */
+    public void addStudentToList(String fullName, int sn, double gpa){
+      Student s = new Student(fullName, sn, gpa);
+      studList.add(s);
+    }
+
+    //public void parseName(string fullName){}
+
     public void deleteStudent(String lastName)
     {
-        // initialise instance variables
-       
+
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
     public void deleteStudent(int stuNumber)
     {
-       
+
     }
-    
+
     public void editStudentList(String lastName)
     {
-        
+
     }
 }

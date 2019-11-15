@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Student
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Student\ here.\r\n\r\n\ @author\ (Allecz\ RoadRiguese)\r\n\ @version\ (1115)\r\n
+comment1.params=fullName\ stuNum\ gpa
+comment1.target=Student(java.lang.String,\ int,\ double)
+comment2.params=fullName
+comment2.target=void\ parseName(java.lang.String)
+numComments=3
