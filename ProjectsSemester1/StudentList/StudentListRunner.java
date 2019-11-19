@@ -46,9 +46,10 @@ public class StudentListRunner{
 
                 studList.addStudentToList(fullName, stuNum, gpa);
             }
-            // if(inputStr.equals("2")){
-            // studentList.deleteStudentToList();
-            // }
+            
+             if(inputStr.equals("2")){
+             studentList.deleteStudentToList();
+             }
             // if(inputStr.equals("3")){
             // studentList.editStudentList();
             // }

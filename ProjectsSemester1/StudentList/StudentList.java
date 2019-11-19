@@ -29,6 +29,18 @@ public class StudentList{
 
     public void editStudentList(String lastName)
     {
+        
 
+    }
+    public void printStudentList(String lastName)
+    {
+          for(int i = 0; 1 < studlist.size(); i++){
+            Student stud = studList.get(GPA);
+            
+            Student stud = studList.get(Stud ID);
+            stud.getLastName();
+           if(fullName.equals(studList.get()){
+            }
+        }
     }
 }
