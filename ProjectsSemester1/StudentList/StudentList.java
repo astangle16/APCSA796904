@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class StudentList here.
  *
@@ -32,14 +31,16 @@ public class StudentList{
         
 
     }
-    public void printStudentList(String lastName)
+    public void printStudentList()
     {
-          for(int i = 0; 1 < studlist.size(); i++){
-            Student stud = studList.get(GPA);
+          for(int i = 0; i < studList.size(); i++){
+            Student stud = studList.get(i);
             
-            Student stud = studList.get(Stud ID);
-            stud.getLastName();
-           if(fullName.equals(studList.get()){
+            int stuNumHolder = stud.getStuNum();
+            String lName = stud.getLastName();
+            double gpa = stud.getGPA();
+            System.out.println("name" +name +"StudName" + student name +"Student num" +student num +"gpa" +gpa););
+            
             }
         }
     }
