@@ -1,8 +1,8 @@
 #BlueJ package file
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=552
-editor.fx.0.y=100
+editor.fx.0.height=1056
+editor.fx.0.width=1936
+editor.fx.0.x=-8
+editor.fx.0.y=-8
 objectbench.height=155
 objectbench.width=760
 package.divider.horizontal=0.6
@@ -24,10 +24,10 @@ readme.width=47
 readme.x=10
 readme.y=10
 target1.height=50
-target1.name=video13
+target1.name=video13While
 target1.showInterface=false
 target1.type=ClassTarget
-target1.width=80
+target1.width=110
 target1.x=160
 target1.y=10
 target2.height=50
