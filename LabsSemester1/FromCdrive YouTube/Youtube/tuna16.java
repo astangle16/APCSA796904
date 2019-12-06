@@ -5,11 +5,11 @@ import java.util.Scanner;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Video16ManyMethods
+public class tuna16
 {
 public static void main(String[] args){
 Scanner input = new Scanner(System.in);
-tuna tunaObject = new tuna();
+tuna16 tunaObject = new tuna16();
 System.out.println("enter name here:");
 String temp = input.nextLine();             // stores name here
 tunaObject.setName(temp);

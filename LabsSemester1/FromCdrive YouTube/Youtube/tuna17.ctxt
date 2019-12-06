@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=tuna17
+comment1.params=name
+comment1.target=tuna17(java.lang.String)
+comment2.params=name
+comment2.target=void\ setName(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=
+comment4.target=void\ saying()
+numComments=5
