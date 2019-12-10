@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 /**
  * Write a description of class apple21 here.
  *
@@ -14,17 +15,17 @@ public class apple21
         int average;
         int counter = 0;
         
+        while(counter < 10){
+            grade = input.nextInt();
+            total = total + grade;
+            counter++;
+            
     }
     
-  
-    public apple21()
-    {
-        
-    }
-
- 
-    public int sampleMethod(int y)
-    {
+    average = total/10;
+    System.out.println("your average is" + average);
+    
+    
         
     }
 }
